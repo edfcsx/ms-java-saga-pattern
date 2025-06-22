@@ -1,0 +1,8 @@
+server:
+  port: 3000
+
+spring:
+  data:
+    mongodb:
+      database: admin
+      uri: ${MONGO_DB_URI:mongodb://root:g31sdk@localhost:27017}

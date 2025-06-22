@@ -1,0 +1,20 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: payment-service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5434}/${DB_DATABASE:payment-db}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:g31sdk}
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
