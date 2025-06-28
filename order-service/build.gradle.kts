@@ -42,11 +42,6 @@ dependencies {
     testImplementation("org.springframework.kafka:spring-kafka-test")
 }
 
-tasks.named<org.springframework.boot.gradle.tasks.bundling.BootJar>("bootJar") {
-    archiveFileName.set("application.jar")
-    destinationDirectory.set(layout.buildDirectory.dir("libs"))
-}
-
 tasks.test {
     useJUnitPlatform()
 }
